@@ -4,7 +4,7 @@ client.on("ready", () => {
   console.log("Bot Ready");
 });
 client.on("message", (message) => {
-  if (message.member.roles.has("527684782587510815")) {
+  if (message.member.roles.some(r=>["DND"].includes(r.name))) {
     message.delete(10)
     message.author.send("Hey, you're currently on Study Mode. To turn this off, just write `$studymodeoff` in the general chat. Thank you for being a good student!")
   }else
