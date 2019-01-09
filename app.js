@@ -5,12 +5,12 @@ client.on("ready", () => {
 });
 client.on("message", (message) => {
   if (message.member.roles.has("527684782587510815")) {
-    message.channel.delete(10)
+    message.delete(10)
     message.author.send("Hey, you're currently on Study Mode. To turn this off, just write `$studymodeoff` in the general chat. Thank you for being a good student!")
   }else
   if (message.mentions.users.first()) {
     if (message.mentions.users.find("527684782587510815")) {
-      message.channel.delete(10)
+      message.delete(10)
       message.author.send("Hey, this person is currently in Study Mode.")
       }
   }else
