@@ -7,12 +7,12 @@ client.on("message", (message) => {
   if (message.content.startsWith("!dndoff")) {
     let role = message.guild.roles.find(role => role.name === "NoDisturb");
     let member = message.member
-    member.roles.remove(role).catch(console.error)
+    member.removeRole(role).catch(console.error)
   }else
   if (message.content.startsWith("!dndon")) {
     let role = message.guild.roles.find(role => role.name === "NoDisturb");
     let member = message.member
-    member.roles.add(role).catch(console.error)
+    member.addRole(role).catch(console.error)
   }
   });
 client.login(process.env.BOT_TOKEN)
