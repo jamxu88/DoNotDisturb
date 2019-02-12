@@ -4,12 +4,12 @@ client.on("ready", () => {
   console.log("DND Bot On!");
 });
 client.on("message", (message) => {
-  if (message.content.startsWith("$studdymodeoff")) {
+  if (message.content.startsWith("!dndoff")) {
     let role = message.guild.roles.find("527684778653253642")
     let member = message.author.id
     member.removeRole("527684778653253642").catch(console.error)
   }else
-  if (message.content.startsWith("$studymodeon")) {
+  if (message.content.startsWith("!dndon")) {
     let role = message.guild.roles.find("527684778653253642")
     let member = message.author.id
     member.addRole("527684778653253642").catch(console.error)
