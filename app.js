@@ -10,7 +10,7 @@ client.on("message", (message) => {
     member.removeRole(role).catch(console.error)
   }else
   if (message.content.startsWith("!dndon")) {
-    let role = message.guild.roles.find("NoDisturb")
+    let role = message.guild.roles.find(role => role.name === "NoDisturb");
     let member = message.author.id
     member.addRole(role).catch(console.error)
   }
