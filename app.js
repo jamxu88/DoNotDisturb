@@ -11,7 +11,7 @@ client.on('messageReactionAdd', (reaction, user, message) => {
   }
 });
 client.on('messageReactionRemove', (reaction, user, message) => {
-  if (message.id === "545430535871266817")) {
+  if (message.id === "545430535871266817") {
     let role = message.guild.roles.find(role => role.name === "NoDisturb");
     let member = message.member
     member.addRole(role).catch(console.error)
