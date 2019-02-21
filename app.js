@@ -14,6 +14,7 @@ client.on("message", (message) => {
     let role = message.guild.roles.find(role => role.name === "NoDisturb");
     let member = message.member
     member.addRole(role).catch(console.error);
+    message.delete();
   }else
   if (message.channel.id === "545076810036281354") {
     message.delete();
@@ -22,7 +23,6 @@ client.on("message", (message) => {
     let role = message.guild.roles.find(role => role.name === "NoDisturb");
     let member = message.member
     member.addRole(role).catch(console.error);
-    message.delete();
   }
 });
 client.login(process.env.BOT_TOKEN)
