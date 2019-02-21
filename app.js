@@ -17,6 +17,11 @@ client.on("message", (message) => {
   }else
   if (message.channel.id === "545076810036281354") {
     message.delete();
+  }else
+  if (message.content.startsWith("i need to work")) {
+    let role = message.guild.roles.find(role => role.name === "NoDisturb");
+    let member = message.member
+    member.addRole(role).catch(console.error)
   }
 });
 client.login(process.env.BOT_TOKEN)
