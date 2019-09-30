@@ -16,7 +16,7 @@ client.on("message", (message) => {
     member.addRole(role).catch(console.error);
     message.delete();
   }else
-  if (message.channel.id === "545076810036281354") {
+  if (message.channel.id === "628377925535924247") {
     message.delete();
   }else
   if (message.content.startsWith("i need to work")) {
